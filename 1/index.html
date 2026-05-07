@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Пиломатериалы и дрова | Доставка по России</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Яндекс Карты -->
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш_ключ&lang=ru_RU" type="text/javascript"></script>
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>Лес<span>Профи</span></h1>
+                    <p>Пиломатериалы и дрова с 2007 года</p>
+                </div>
+                <div class="header-contacts">
+                    <a href="tel:+79001234567" class="phone">+7 (900) 123-45-67</a>
+                    <div class="messengers">
+                        <a href="https://t.me/lesprofi" target="_blank" class="messenger-link tg" title="Telegram">TG</a>
+                        <a href="https://im.max.ru/lesprofi" target="_blank" class="messenger-link max" title="MAX">MAX</a>
+                    </div>
+                    <button class="callback-btn" id="openFormBtn">Заказать звонок</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Герой секция -->
+        <section class="hero">
+            <div class="container">
+                <h2>Качественные пиломатериалы<br>и дрова с доставкой</h2>
+                <p>Собственный автопарк. Работаем с частниками и крупными предприятиями</p>
+                <button class="hero-btn" id="heroFormBtn">Рассчитать доставку со скидкой</button>
+            </div>
+        </section>
+
+        <!-- Продукция (лес и дрова) -->
+        <section class="products">
+            <div class="container">
+                <h2>Продукция</h2>
+                <div class="products-grid">
+                    <div class="product-card">
+                        <img class="product-image" src="img/drova1" alt="дрова колотые">
+                        <h3>Дрова колотые</h3>
+                        <p>Берёза, осина, дуб. Сухие и качественные. Идеально для печей и каминов.</p>
+                        <span class="price">от 1500 ₽/м³</span>
+                    </div>
+                    <div class="product-card">
+                        <h3>Дрова неколотые</h3>
+                        <p>Кругляк различных пород. Для самостоятельной заготовки или производства.</p>
+                        <span class="price">от 900 ₽/м³</span>
+                    </div>
+                    <div class="product-card">
+                        <h3>Пиломатериалы</h3>
+                        <p>Доска обрезная, брус, горбыль. Любые размеры под заказ.</p>
+                        <span class="price">индивидуально</span>
+                    </div>
+                    <div class="product-card">
+                        <h3>Лес кругляк</h3>
+                        <p>Строительный лес. Сосна, ель, лиственница. Отличное качество.</p>
+                        <span class="price">от 5000 ₽/м³</span>
+                    </div>
+                </div>
+                <p class="products-note">* Сорта дров и леса уточняйте по телефону. Возможна поставка любых объёмов под заказ.</p>
+            </div>
+        </section>
+
+        <!-- Доставка (таблица) -->
+        <section class="delivery">
+            <div class="container">
+                <h2>Доставка своим транспортом</h2>
+                <table class="delivery-table">
+                    <thead>
+                        <tr><th>Объем</th><th>Транспорт</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>до 3 м³</td><td>Газель</td></tr>
+                        <tr><td>3–12 м³</td><td>КамАЗ 10т (самопогрузчик)</td></tr>
+                        <tr><td>20–40 м³</td><td>Большегрузный длинномер (Фура)</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Преимущества -->
+        <section class="advantages">
+            <div class="container">
+                <h2>Почему выбирают нас</h2>
+                <div class="advantages-grid">
+                    <div class="advantage-item">
+                        <div class="advantage-icon"><i class="fa-solid fa-briefcase"></i></div>
+                        <h3>Опыт с 2007 года</h3>
+                        <p>17+ лет на рынке пиломатериалов</p>
+                    </div>
+                    <div class="advantage-item">
+                        <div class="advantage-icon">🚛</div>
+                        <h3>Свой автопарк</h3>
+                        <p>Машины с самопогрузчиком</p>
+                    </div>
+                    <div class="advantage-item">
+                        <div class="advantage-icon">💰</div>
+                        <h3>Скидки на доставку</h3>
+                        <p>Индивидуальные условия для каждого клиента</p>
+                    </div>
+                    <div class="advantage-item">
+                        <div class="advantage-icon">🌲</div>
+                        <h3>Собственное производство</h3>
+                        <p>Контроль качества на всех этапах</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Оплата -->
+        <section class="payment">
+            <div class="container">
+                <h2>Способы оплаты</h2>
+                <div class="payment-methods">
+                    <span>Наличные</span>
+                    <span>Наличные на карту</span>
+                    <span>Безналичный без НДС</span>
+                    <span>Безналичный с НДС</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Форма обратной связи -->
+        <section class="callback-form" id="formSection">
+            <div class="container">
+                <h2>Оставьте заявку</h2>
+                <p>Мы перезвоним в течение 15 минут и рассчитаем доставку со скидкой</p>
+                <form id="contactForm">
+                    <input type="text" name="name" placeholder="Ваше имя" required>
+                    <input type="tel" name="phone" placeholder="Ваш телефон" required>
+                    <textarea name="message" placeholder="Какой материал нужен и объём? (необязательно)" rows="3"></textarea>
+                    <button type="submit" class="submit-btn">Отправить заявку</button>
+                </form>
+                <div id="formMessage" class="form-message"></div>
+            </div>
+        </section>
+
+        <!-- О нас -->
+        <section class="about">
+            <div class="container">
+                <h2>О компании</h2>
+                <p class="about-text">На рынке пиломатериалов наша компания с <strong>2007 года</strong>. Имеем опыт работы с крупными предприятиями. Также неизменно компания занимается изготовлением качественного пиломатериала для частных клиентов. Еще одно направление лесопроизводства — <strong>дрова</strong>. Мы всегда стараемся предложить лучшее для наших клиентов и по доступной цене, а также с хорошими скидками на доставку. Звоните, здесь всегда рады вам помочь!</p>
+            </div>
+        </section>
+
+        <!-- Контакты и карта -->
+        <section class="contacts">
+            <div class="container">
+                <h2>Контакты</h2>
+                <div class="contacts-wrapper">
+                    <div class="contacts-info">
+                        <p><strong>Телефон:</strong> <a href="tel:+79001234567">+7 (900) 123-45-67</a></p>
+                        <p><strong>Мессенджеры:</strong></p>
+                        <div class="messengers-big">
+                            <a href="https://t.me/lesprofi" target="_blank" class="messenger-link tg">Telegram</a>
+                            <a href="https://im.max.ru/lesprofi" target="_blank" class="messenger-link max">MAX</a>
+                        </div>
+                        <p><strong>Адрес склада:</strong> Московская область, г. Мытищи, ул. Лесная, д. 15</p>
+                        <p><strong>Режим работы:</strong> Пн-Пт: 9:00–18:00, Сб: 10:00–15:00</p>
+                    </div>
+                    <div id="map" class="map-container"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2025 ЛесПрофи. Все права защищены.</p>
+            <p>Сайт создан: пиломатериалы, дрова колотые и неколотые, доставка по России</p>
+        </div>
+    </footer>
+
+    <!-- Модальное окно формы (дублирует форму для удобства) -->
+    <div id="modalForm" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>Быстрая заявка</h3>
+            <form id="modalContactForm">
+                <input type="text" name="name" placeholder="Ваше имя" required>
+                <input type="tel" name="phone" placeholder="Ваш телефон" required>
+                <textarea name="message" placeholder="Объём и тип материала" rows="3"></textarea>
+                <button type="submit" class="submit-btn">Перезвоните мне</button>
+            </form>
+        </div>
+    </div>
+
+    
+    <script src="script.js"></script>
+</body>
+</html>
