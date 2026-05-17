@@ -12,6 +12,24 @@ $name = isset($_POST['name']) ? trim($_POST['name']) : '';
 $phone = isset($_POST['phone']) ? trim($_POST['phone']) : '';
 $message = isset($_POST['message']) ? trim($_POST['message']) : '';
 
+$topics = [];
+if (!empty($_POST['topic'])) {
+    if (is_array($_POST['topic'])) {
+        foreach ($_POST['topic'] as $topic) {
+            $topic = trim($topic);
+            if ($topic !== '') {
+                $topics[] = $topic;
+            }
+        }
+    } else {
+        $topic = trim($_POST['topic']);
+        if ($topic !== '') {
+            $topics[] = $topic;
+        }
+    }
+}
+$topic_text = !empty($topics) ? implode(', ', $topics) : 'Не указано';
+
 // Проверка на заполнение обязательных полей
 if (empty($name) || empty($phone)) {
     echo json_encode(['success' => false, 'message' => 'Заполните имя и телефон'], JSON_UNESCAPED_UNICODE);
@@ -29,7 +47,8 @@ $email_content .= "📋 НОВАЯ ЗАЯВКА С САЙТА\n";
 $email_content .= "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n";
 $email_content .= "👤 Имя: " . $name . "\n";
 $email_content .= "📞 Телефон: " . $phone . "\n";
-$email_content .= "📝 Сообщение: " . ($message ?: "Не указано") . "\n\n";
+$email_content .= "� По вопросам: " . $topic_text . "\n";
+$email_content .= "�📝 Сообщение: " . ($message ?: "Не указано") . "\n\n";
 $email_content .= "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n";
 $email_content .= "📅 Дата: " . date("d.m.Y H:i:s") . "\n";
 $email_content .= "🌐 IP: " . $_SERVER['REMOTE_ADDR'] . "\n";

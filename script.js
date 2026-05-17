@@ -44,11 +44,8 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Собираем данные
         const formData = new FormData(form);
-        const data = {
-            name: formData.get('name'),
-            phone: formData.get('phone'),
-            message: formData.get('message') || formData.get('product') || 'Не указано'
-        };
+        const message = formData.get('message') || formData.get('product') || 'Не указано';
+        formData.set('message', message);
         
         // Показываем индикатор загрузки
         const submitBtn = form.querySelector('.submit-btn');
@@ -59,7 +56,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         
         // Отправляем на сервер
-        const result = await sendToServer(data);
+        const result = await sendToServer(formData);
         
         // Восстанавливаем кнопку
         if (submitBtn) {
