@@ -96,6 +96,31 @@ h1, h2, h3, h4, .logo, button {
     letter-spacing: 0.5px;
 }
 
+/* Logo images */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.site-logo {
+    width: 76px;
+    height: auto;
+    border-radius: 8px;
+    display: inline-block;
+}
+
+.logo-text h1 {
+    margin: 0;
+}
+
+.footer-logo {
+    width: 120px;
+    height: auto;
+    display: block;
+    margin: 0 auto 12px;
+}
+
 .header-contacts {
     display: flex;
     align-items: center;

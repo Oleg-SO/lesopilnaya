@@ -1,0 +1,4 @@
+Added logo img in header and footer. Styles added to style.css.
+Files changed:
+- index.html
+- style.css
